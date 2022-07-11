@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978261322352",
+    "project_id": "duri-33d5f",
+    "storage_bucket": "duri-33d5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978261322352:android:be94c19abd341368dfe2b5",
+        "android_client_info": {
+          "package_name": "com.eunwon.duri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978261322352-9gs5flqoskegfjao2n17ras4ercc8bqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi6LTCGKxMnfa0KUswj3S2ynAwfED1ios"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978261322352-9gs5flqoskegfjao2n17ras4ercc8bqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

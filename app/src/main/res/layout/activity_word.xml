@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.WordActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/word_english_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="english"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/word_korean_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="korean"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/word_update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정 완료"
+            android:textSize="20sp"
+            app:strokeColor="@color/main"
+            app:strokeWidth="2dp"
+            android:textColor="@color/main"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+
+        <Button
+            android:id="@+id/word_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:textSize="20sp"
+            app:strokeColor="@color/red"
+            app:strokeWidth="2dp"
+            android:textColor="@color/red"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>
