@@ -3,10 +3,13 @@ package com.eunwon.duri.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 import com.eunwon.duri.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -55,6 +59,8 @@ public class AddWordActivity extends AppCompatActivity {
                     SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
                     String userID = pref.getString("userID", "!");
 
+                    hideKeyboard();
+
                     Map<String, Object> data = new HashMap<>();
                     data.put("english", englishEditText.getText().toString());
                     data.put("korean", koreanEditText.getText().toString());
@@ -69,7 +75,10 @@ public class AddWordActivity extends AppCompatActivity {
                                     englishEditText.setText("");
                                     koreanEditText.setText("");
 
-                                    Toast.makeText(AddWordActivity.this, "단어가 추가되었습니다", Toast.LENGTH_SHORT).show();;
+                                    View v = findViewById(R.id.add_word_parent_layout);
+                                    Snackbar.make(v, "단어가 추가되었습니다", Snackbar.LENGTH_SHORT)
+                                            .setBackgroundTint(getColor(R.color.main))
+                                            .show();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
@@ -81,5 +90,10 @@ public class AddWordActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(koreanEditText.getWindowToken(), 0);
     }
 }

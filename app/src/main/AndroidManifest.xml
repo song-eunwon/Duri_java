@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize"
         android:theme="@style/Theme.Duri">
         <activity
             android:name=".activity.WebActivity"
